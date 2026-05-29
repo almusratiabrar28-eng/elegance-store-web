@@ -1,0 +1,645 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+    <!-- Meta Tags and Title -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Elegance Store - Women's Suit</title>
+    
+    <!-- External Resources: Fonts and Stylesheets -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- ============================================ -->
+    <!-- HEADER SECTION: Logo, Navigation, Icons -->
+    <!-- ============================================ -->
+    <header>
+        <div class="header-container">
+            <!-- Logo -->
+            <a href="#" class="logo">Elegance <span>Store</span></a>
+            
+            <!-- Mobile Menu Button -->
+            <button class="mobile-menu-btn" onclick="toggleMenu()">☰</button>
+            
+            <!-- Navigation Menu -->
+            <nav>
+                <ul id="nav-menu">
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#products">Products</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </nav>
+            
+            <!-- Header Icons: Search, User, Cart -->
+            <div class="header-icons">
+                <!-- Search Icon -->
+                <button type="button" class="icon-btn search-icon" id="open-search-btn" aria-label="Show search suggestions">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <circle cx="11" cy="11" r="8"></circle>
+                        <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+                    </svg>
+                </button>
+
+                <div class="search-panel" id="search-panel" aria-hidden="true">
+                    <p class="search-panel-title">Search suggestions</p>
+                    <button type="button" class="search-suggestion-btn">Jackets</button>
+                    <button type="button" class="search-suggestion-btn">Suit</button>
+                    <button type="button" class="search-suggestion-btn">Winter collection</button>
+                    <button type="button" class="search-suggestion-btn">Summer offers</button>
+                    <p class="search-selected" id="search-selected">Choose a suggestion to preview it.</p>
+                </div>
+                
+                <!-- User Icon -->
+                <button type="button" class="icon-btn user-icon" id="open-login-btn" aria-label="Open login form">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path>
+                        <circle cx="12" cy="7" r="4"></circle>
+                    </svg>
+                </button>
+                
+                <!-- Cart Icon -->
+                <button type="button" class="icon-btn cart-icon" aria-label="Shopping cart">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <circle cx="9" cy="21" r="1"></circle>
+                        <circle cx="20" cy="21" r="1"></circle>
+                        <path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"></path>
+                    </svg>
+                    <span class="cart-count" id="cart-count">0</span>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- ============================================ -->
+    <!-- HERO SECTION: Main Banner with CTA -->
+    <!-- ============================================ -->
+    <section class="hero" id="home">
+        <!-- Background Overlay -->
+        <div class="hero-overlay"></div>
+        
+        <!-- Hero Content: Title, Description, CTA Button -->
+        <div class="hero-content">
+            <h1>Discover the Latest Women's Suit</h1>
+            <p>Elegant and modern designs for every occasion</p>
+            <a href="#products" class="btn">Shop Now</a>
+        </div>
+        
+        <!-- Hero Image -->
+        <div class="hero-image">
+            <img src="images/sticker.webp" alt="Elegance Image">
+        </div>
+    </section>
+
+    <!-- ============================================ -->
+    <!-- LATEST COLLECTION SECTION: Seasonal Collections -->
+    <!-- ============================================ -->
+    <section class="latest-collection animate-on-scroll">
+        <h2 class="section-title">Latest Collections</h2>
+        <div class="collection-grid">
+            <!-- Spring Collection -->
+            <div class="collection-item">
+                <img src="images/photo_2026-05-29_10-36-45.jpg" alt="Spring Collection">
+                <div class="collection-overlay">
+                    <h3>Spring Collection</h3>
+                    <p>Vibrant colors and modern designs</p>
+                </div>
+            </div>
+            
+            <!-- Summer Collection -->
+            <div class="collection-item">
+                <img src="images/photo_2026-05-29_10-37-35.jpg" alt="Summer Collection">
+                <div class="collection-overlay">
+                    <h3>Summer Collection</h3>
+                    <p>Light and comfortable for work</p>
+                </div>
+            </div>
+            
+            <!-- Winter Collection -->
+            <div class="collection-item">
+                <img src="images/photo_2026-05-29_10-38-13.jpg">
+                <div class="collection-overlay">
+                    <h3>Winter Collection</h3>
+                    <p>Warm and elegant for occasions</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============================================ -->
+    <!-- SALE SECTION: Special Offers Banner -->
+    <!-- ============================================ -->
+    <section class="sale-section animate-on-scroll">
+        <div class="sale-content">
+            <div class="sale-badge">Up to 50% Off</div>
+            <h2>Exclusive Limited-Time Offers</h2>
+            <p>Take advantage and get the most beautiful formal suit at unbeatable prices</p>
+
+            <div class="seasonal-offers-card">
+                <h3>Seasonal Offers</h3>
+                <ul class="seasonal-offers-list">
+                    <li><strong>Summer Offers</strong> — Light and fresh styles with up to 30% off.</li>
+                    <li><strong>Spring Offers</strong> — Soft colors and elegant designs with up to 25% off.</li>
+                    <li><strong>Winter Offers</strong> — Warm and premium collections with up to 35% off.</li>
+                </ul>
+            </div>
+
+            <a href="#products" class="btn btn-sale">Shop Sale Now</a>
+        </div>
+    </section>
+
+    <!-- ============================================ -->
+    <!-- PRODUCTS SECTION: Featured Products Grid -->
+    <!-- ============================================ -->
+    <section class="products animate-on-scroll" id="products">
+        <h2 class="section-title">Our Featured Products</h2>
+        <div class="products-grid">
+            <!-- Product 1: Elegant Black Suit -->
+            <div class="product-card animate-on-scroll">
+                <div class="product-image">
+                    <img src="images/photo_2026-05-29_10-26-11.jpg" alt="Elegant Black Suit">
+                    <div class="product-overlay">
+                        <div class="product-price">$122</div>
+                        <button class="add-to-cart" type="button">Add to Cart</button>
+                    </div>
+                </div>
+                <div class="product-info">
+                    <h3 class="product-name">Elegant Black Suit</h3>
+                    <p class="product-description">Classic black formal suit perfect for any occasion</p>
+                </div>
+            </div>
+
+            <!-- Product 2: Luxury Pink Suit -->
+            <div class="product-card animate-on-scroll">
+                <div class="product-image">
+                    <img src="images/photo_2026-05-29_10-23-19.jpg" alt="Luxury Pink Suit">
+                    <div class="product-overlay">
+                        <div class="product-price">$140</div>
+                        <button class="add-to-cart" type="button">Add to Cart</button>
+                    </div>
+                </div>
+                <div class="product-info">
+                    <h3 class="product-name">Luxury Pink Suit</h3>
+                    <p class="product-description">Pink suit with a luxurious touch suitable for work and special occasions</p>
+                </div>
+            </div>
+
+            <!-- Product 3: Distinct Navy Suit -->
+            <div class="product-card animate-on-scroll">
+                <div class="product-image">
+                    <img src="images/photo_2026-05-29_10-18-20.jpg" alt="Distinct Navy Suit">
+                    <div class="product-overlay">
+<div class="product-price">$130</div>
+                        <button class="add-to-cart" type="button">Add to Cart</button>
+                    </div>
+                </div>
+                <div class="product-info">
+                    <h3 class="product-name">Distinct Navy Suit</h3>
+                    <p class="product-description">Navy suit with a modern design combining elegance and comfort</p>
+                </div>
+            </div>
+
+            <!-- Product 4: Practical Gray Suit -->
+            <div class="product-card animate-on-scroll">
+                <div class="product-image">
+                    <img src="images/photo_2026-05-29_10-29-10.jpg" alt="Practical Gray Suit">
+                    <div class="product-overlay">
+                        <div class="product-price">$103</div>
+                        <button class="add-to-cart" type="button">Add to Cart</button>
+                    </div>
+                </div>
+                <div class="product-info">
+                    <h3 class="product-name">Practical Gray Suit</h3>
+                    <p class="product-description">Practical gray suit perfect for daily use and work</p>
+                </div>
+            </div>
+
+            <!-- Product 5: Classic Sky Blue Suit -->
+            <div class="product-card animate-on-scroll">
+                <div class="product-image">
+                    <img src="images/photo_2026-05-29_10-29-55.jpg" alt="Classic Sky Blue Suit">
+                    <div class="product-overlay">
+                        <div class="product-price">$149</div>
+                        <button class="add-to-cart" type="button">Add to Cart</button>
+                    </div>
+                </div>
+                <div class="product-info">
+                    <h3 class="product-name">Classic Sky Blue Suit</h3>
+                    <p class="product-description">Classic suit with a touch of timeless elegance</p>
+                </div>
+            </div>
+
+            <!-- Product 6: Elegant Beige Suit -->
+            <div class="product-card animate-on-scroll">
+                <div class="product-image">
+                    <img src="images/photo_2026-05-29_10-30-23.jpg" alt="Elegant Beige Suit">
+                    <div class="product-overlay">
+                        <div class="product-price">$162</div>
+                        <button class="add-to-cart" type="button">Add to Cart</button>
+                    </div>
+                </div>
+                <div class="product-info">
+                    <h3 class="product-name">Elegant Beige Suit</h3>
+                    <p class="product-description">Elegant suit with a sophisticated design suitable for all occasions</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============================================ -->
+    <!-- FEATURES SECTION: Key Selling Points -->
+    <!-- ============================================ -->
+    <section class="features animate-on-scroll">
+        <div class="features-container">
+            <!-- Feature 1: High Quality -->
+            <div class="feature-item">
+                <div class="feature-icon">✨</div>
+                <h3 class="feature-title">High Quality</h3>
+                <p>Our products are made from the finest materials</p>
+            </div>
+            
+            <!-- Feature 2: Fast Delivery -->
+            <div class="feature-item">
+                <div class="feature-icon">🚚</div>
+                <h3 class="feature-title">Fast Delivery</h3>
+                <p>Delivery to all regions of the Kingdom</p>
+            </div>
+            
+            <!-- Feature 3: Secure Payment -->
+            <div class="feature-item">
+                <div class="feature-icon">💳</div>
+                <h3 class="feature-title">Secure Payment</h3>
+                <p>Multiple and secure payment methods</p>
+            </div>
+ <!-- Feature 4: Easy Returns -->
+            <div class="feature-item">
+                <div class="feature-icon">↩️</div>
+                <h3 class="feature-title">Easy Returns</h3>
+                <p>Flexible return policy</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============================================ -->
+    <!-- ABOUT SECTION: Company Information -->
+    <!-- ============================================ -->
+    <section class="about animate-on-scroll" id="about">
+        <div class="about-content about-grid">
+            <div class="about-text">
+                <h2>About Elegance Store</h2>
+                <p>Elegance Store is your perfect destination for women's suit. We offer a wide collection of modern designs that suit all tastes and occasions.</p>
+                <p>We are committed to providing high-quality products at competitive prices, with excellent customer service and fast delivery to all regions of Saudi Arabia.</p>
+                <p>We always strive for your satisfaction and meeting your expectations by providing the best products and services.</p>
+            </div>
+            <div class="about-image-box">
+                <img src="images/sticker.webp" alt="About Elegance Store" class="about-image">
+            </div>
+        </div>
+    </section>
+ <!-- ============================================ -->
+    <!-- CONTACT SECTION: Contact Info and Form -->
+    <!-- ============================================ -->
+    <section class="contact animate-on-scroll" id="contact">
+        <div class="contact-container">
+            <!-- Contact Information -->
+            <div class="contact-info">
+                <h3>Contact Us</h3>
+                <div class="contact-item">
+                    <span>📍</span>
+                    <p>Riyadh, Saudi Arabia</p>
+                </div>
+                <div class="contact-item">
+                    <span>📞</span>
+                    <p>+966 50 123 4567</p>
+                </div>
+                <div class="contact-item">
+                    <span>✉️</span>
+                    <p>info@elegance-store.com</p>
+                </div>
+                <div class="contact-item">
+                    <span>⏰</span>
+                    <p>Saturday - Thursday: 9 AM - 10 PM</p>
+                </div>
+            </div>
+            
+            <!-- Contact Form -->
+            <div class="contact-form">
+                <form onsubmit="submitForm(event)">
+                    <div class="form-group">
+                        <input type="text" placeholder="Name" required>
+                    </div>
+                    <div class="form-group">
+                        <input type="email" placeholder="Email" required>
+                    </div>
+                    <div class="form-group">
+                        <textarea placeholder="Your message" required></textarea>
+                    </div>
+                    <button type="submit" class="btn">Send</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============================================ -->
+    <!-- TESTIMONIALS SECTION: Customer Reviews -->
+    <!-- ============================================ -->
+    <section class="testimonials animate-on-scroll">
+        <h2 class="section-title">Customer Reviews</h2>
+        <div class="testimonials-grid">
+            <!-- Review 1: Sarah Ahmed -->
+            <div class="testimonial-card">
+                <div class="testimonial-stars">⭐⭐⭐⭐⭐</div>
+                <p class="testimonial-text">"Wonderful products and very high quality. The classic white shoes have become my favorite for formal occasions. Thank you Elegance Store!"</p>
+                <div class="testimonial-author">
+                    <div class="author-avatar">
+                        <img src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=100" alt="Sarah Ahmed">
+                    </div>
+                    <div class="author-info">
+                        <h4>Sarah Ahmed</h4>
+                        <span>Riyadh</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Review 2: Noura Al-Otaibi -->
+            <div class="testimonial-card">
+                <div class="testimonial-stars">⭐⭐⭐⭐⭐</div>
+                <p class="testimonial-text">"Excellent customer service and fast delivery. The designs are modern and very elegant. I recommend everyone to shop from this store."</p>
+                <div class="testimonial-author">
+                    <div class="author-avatar">
+                        <img src="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=100" alt="Noura Al-Otaibi">
+                    </div>
+                    <div class="author-info">
+                        <h4>Noura Al-Otaibi</h4>
+                        <span>Jeddah</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Review 3: Fatima Al-Qahtani -->
+            <div class="testimonial-card">
+                <div class="testimonial-stars">⭐⭐⭐⭐⭐</div>
+                <p class="testimonial-text">"The prices are very reasonable compared to the quality. The elegant navy shoes exceeded my expectations. I will definitely come back to buy again."</p>
+                <div class="testimonial-author">
+                    <div class="author-avatar">
+ <img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=100" alt="Fatima Al-Qahtani">
+                    </div>
+                    <div class="author-info">
+                        <h4>Fatima Al-Qahtani</h4>
+                        <span>Dammam</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============================================ -->
+    <!-- FOOTER SECTION: Links, Contact, Social Media -->
+    <!-- ============================================ -->
+    <footer>
+        <div class="footer-container">
+            <!-- Footer Section 1: Brand Info & Social Links -->
+            <div class="footer-section">
+                <h3 class="footer-title">Elegance Store</h3>
+                <p class="footer-description">Your first destination for women's suit with modern and elegant designs</p>
+                <div class="social-links">
+                    <!-- Facebook -->
+                    <a href="#" class="social-icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"></path>
+                        </svg>
+                    </a>
+                    <!-- Instagram -->
+                    <a href="#" class="social-icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
+                            <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
+                            <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
+                        </svg>
+                    </a>
+                    <!-- Twitter -->
+                    <a href="#" class="social-icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M23 3a10.9 10.9 0 0 1-3.14 1.53 4.48 4.48 0 0 0-7.86 3v1A10.66 10.66 0 0 1 3 4s-4 9 5 13a11.64 11.64 0 0 1-7 2c9 5 20 0 20-11.5a4.5 4.5 0 0 0-.08-.83A7.72 7.72 0 0 0 23 3z"></path>
+                        </svg>
+                    </a>
+                    <!-- Phone -->
+                    <a href="#" class="social-icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path>
+                        </svg>
+                    </a>
+                </div>
+            </div>
+            
+            <!-- Footer Section 2: Quick Links -->
+            <div class="footer-section">
+                <h3 class="footer-title">Quick Links</h3>
+                <ul class="footer-links">
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#products">Products</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </div>
+            
+            <!-- Footer Section 3: Contact Information -->
+            <div class="footer-section">
+                <h3 class="footer-title">Contact Information</h3>
+                <ul class="footer-contact">
+                    <li>
+                        <svg xm
+ lns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+                            <circle cx="12" cy="10" r="3"></circle>
+                        </svg>
+                        Tripoli, Libya
+                    </li>
+                    <li>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
+                            <polyline points="22,6 12,13 2,6"></polyline>
+                        </svg>
+                        info@elegance-store.com
+                    </li>
+                    <li>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path>
+                        </svg>
+                        +218 91 234 5678
+                    </li>
+                </ul>
+            </div>
+        </div>
+        
+        <!-- Footer Bottom: Copyright -->
+        <div class="footer-bottom">
+            <p>© 2024 Elegance Store. All rights reserved</p>
+        </div>
+    </footer>
+
+
+    <!-- ============================================ -->
+    <!-- LOGIN MODAL -->
+    <!-- ============================================ -->
+    <div class="auth-modal" id="login-modal" aria-hidden="true">
+        <div class="auth-card">
+            <div class="auth-header">
+                <div>
+                    <p class="auth-label">Welcome back</p>
+                    <h3>Sign in to your account</h3>
+                </div>
+                <button type="button" class="close-modal" id="close-login-btn" aria-label="Close login form">✕</button>
+            </div>
+            <p class="auth-note">Use your email and password to continue shopping.</p>
+            <form id="login-form" class="auth-form">
+                <label for="login-user">Email</label>
+                <input id="login-user" type="email" placeholder="Enter your email" required>
+
+                <label for="login-pass">Password</label>
+                <input id="login-pass" type="password" placeholder="Enter your password" required>
+
+                <button type="submit" class="btn auth-submit">Sign In</button>
+            </form>
+        </div>
+    </div>
+
+    <!-- ============================================ -->
+    <!-- JAVASCRIPT: Interactive Functions -->
+    <!-- ============================================ -->
+    <script>
+        // ============================================
+        // MOBILE MENU TOGGLE
+        // ============================================
+        function toggleMenu() {
+            const navMenu = document.getElementById('nav-menu');
+            navMenu.classList.toggle('active');
+        }
+
+        // ============================================
+        // LOGIN POPUP
+        // ============================================
+        const loginModal = document.getElementById('login-modal');
+        const openLoginBtn = document.getElementById('open-login-btn');
+        const closeLoginBtn = document.getElementById('close-login-btn');
+        const loginForm = document.getElementById('login-form');
+        const openSearchBtn = document.getElementById('open-search-btn');
+        const searchPanel = document.getElementById('search-panel');
+        const searchSelected = document.getElementById('search-selected');
+
+        function openLoginModal() {
+            if (!loginModal) return;
+            loginModal.classList.add('active');
+            loginModal.setAttribute('aria-hidden', 'false');
+            document.body.classList.add('modal-open');
+        }
+
+        function closeLoginModal() {
+            if (!loginModal) return;
+            loginModal.classList.remove('active');
+            loginModal.setAttribute('aria-hidden', 'true');
+            document.body.classList.remove('modal-open');
+        }
+
+        if (openLoginBtn) openLoginBtn.addEventListener('click', openLoginModal);
+        if (closeLoginBtn) closeLoginBtn.addEventListener('click', closeLoginModal);
+        if (loginModal) {
+            loginModal.addEventListener('click', function (event) {
+                if (event.target === loginModal) closeLoginModal();
+            });
+        }
+        if (loginForm) {
+            loginForm.addEventListener('submit', function (event) {
+                event.preventDefault();
+                const email = loginForm.querySelector('#login-user').value.trim();
+                if (email) {
+                    alert('Welcome back, ' + email + '!');
+                }
+                loginForm.reset();
+                closeLoginModal();
+            });
+        }
+
+        document.addEventListener('keydown', function (event) {
+            if (event.key === 'Escape' && loginModal && loginModal.classList.contains('active')) {
+                closeLoginModal();
+            }
+        });
+
+        function toggleSearchPanel() {
+            if (searchPanel) {
+                searchPanel.classList.toggle('active');
+                searchPanel.setAttribute('aria-hidden', String(!searchPanel.classList.contains('active')));
+            }
+        }
+
+        if (openSearchBtn) {
+            openSearchBtn.addEventListener('click', function (event) {
+                event.preventDefault();
+                toggleSearchPanel();
+            });
+        }
+
+        document.querySelectorAll('.search-suggestion-btn').forEach(button => {
+            button.addEventListener('click', function () {
+                if (searchSelected) {
+                    searchSelected.textContent = 'Selected suggestion: ' + this.textContent;
+                }
+                if (searchPanel) {
+                    searchPanel.classList.remove('active');
+                    searchPanel.setAttribute('aria-hidden', 'true');
+                }
+            });
+        });
+
+        document.addEventListener('click', function (event) {
+            if (openSearchBtn && searchPanel) {
+                const clickedInside = openSearchBtn.contains(event.target) || searchPanel.contains(event.target);
+                if (!clickedInside) {
+                    searchPanel.classList.remove('active');
+                    searchPanel.setAttribute('aria-hidden', 'true');
+                }
+            }
+        });
+
+        // ============================================
+        // EVENT LISTENERS
+        // ============================================
+
+        // Smooth scroll for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth'
+                    });
+                }
+            });
+        });
+
+        // ============================================
+        // SCROLL REVEAL ANIMATION
+        // ============================================
+        function revealOnScroll() {
+            const elements = document.querySelectorAll('.animate-on-scroll');
+            const windowHeight = window.innerHeight;
+
+            elements.forEach(element => {
+                const elementTop = element.getBoundingClientRect().top;
+                const revealPoint = 150;
+
+                if (elementTop < windowHeight - revealPoint) {
+                    element.classList.add('visible');
+                }
+            });
+        }
+
+        // Initial check and scroll event
+        window.addEventListener('load', revealOnScroll);
+        window.addEventListener('scroll', revealOnScroll);
+    </script>
+</body>
+</html>
