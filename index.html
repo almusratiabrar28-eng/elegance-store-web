@@ -502,6 +502,11 @@
 
                 <button type="submit" class="btn auth-submit">Sign In</button>
             </form>
+
+            <div class="auth-links">
+                <a href="#" class="auth-link" id="forgot-password-link">Forgot password?</a>
+                <p class="auth-switch">Don’t have an account? <button type="button" class="text-link" id="sign-up-link">Sign up</button></p>
+            </div>
         </div>
     </div>
 
@@ -524,6 +529,8 @@
         const openLoginBtn = document.getElementById('open-login-btn');
         const closeLoginBtn = document.getElementById('close-login-btn');
         const loginForm = document.getElementById('login-form');
+        const forgotPasswordLink = document.getElementById('forgot-password-link');
+        const signUpLink = document.getElementById('sign-up-link');
         const openSearchBtn = document.getElementById('open-search-btn');
         const searchPanel = document.getElementById('search-panel');
         const searchSelected = document.getElementById('search-selected');
@@ -558,6 +565,20 @@
                 }
                 loginForm.reset();
                 closeLoginModal();
+            });
+        }
+
+        if (forgotPasswordLink) {
+            forgotPasswordLink.addEventListener('click', function (event) {
+                event.preventDefault();
+                alert('Password recovery will be added soon.');
+            });
+        }
+
+        if (signUpLink) {
+            signUpLink.addEventListener('click', function (event) {
+                event.preventDefault();
+                alert('Sign-up form will be added soon.');
             });
         }
 

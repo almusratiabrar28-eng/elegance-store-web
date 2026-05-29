@@ -1338,6 +1338,41 @@ footer {
 /* RESPONSIVE DESIGN: Mobile Styles */
 /* ============================================ */
 @media (max-width: 768px) {
+    .about {
+        margin: 3rem auto;
+        padding: 0 16px;
+    }
+
+    .about-content {
+        padding: 1.25rem;
+        border-radius: 18px;
+    }
+
+    .about-grid {
+        grid-template-columns: 1fr;
+        gap: 1rem;
+        align-items: start;
+    }
+
+    .about-image-box {
+        display: flex;
+        justify-content: center;
+        width: 100%;
+    }
+
+    .about-image {
+        width: 100%;
+        max-width: 360px;
+        min-height: 220px;
+        margin-bottom: 0.5rem;
+        border-radius: 18px;
+    }
+
+    .about-content p {
+        font-size: 1rem;
+        line-height: 1.75;
+    }
+
     .header-container {
         flex-wrap: wrap;
         gap: 0.6rem;
@@ -1498,6 +1533,39 @@ footer {
     color: #5f5f5f;
     font-size: 0.95rem;
     margin-bottom: 0.9rem;
+}
+
+.auth-links {
+    display: flex;
+    flex-direction: column;
+    gap: 0.35rem;
+    margin-top: 0.8rem;
+}
+
+.auth-link,
+.text-link {
+    color: #ff6b9d;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 0.95rem;
+}
+
+.auth-link:hover,
+.text-link:hover {
+    text-decoration: underline;
+}
+
+.text-link {
+    background: none;
+    border: none;
+    padding: 0;
+    cursor: pointer;
+    font: inherit;
+}
+
+.auth-switch {
+    color: #5f5f5f;
+    font-size: 0.95rem;
 }
 
 .auth-form {
